@@ -6,8 +6,23 @@
         <property name="id" value="1"></property>
         <property name="name" value="张三"></property>
         <property name="age" value="20"></property>
+        <property name="addresses">
+            <list>
+                <ref bean="address"></ref>
+                <ref bean="address2"></ref>
+            </list>
+        </property>
+    </bean>
+    <bean id="user" class="com.zhennan.entity.User" parent="student">
 
     </bean>
-
+    <bean id="address" class="com.zhennan.entity.Address">
+        <property name="id" value="10086"></property>
+        <property name="name" value="科技路"></property>
+    </bean>
+    <bean id="address2" class="com.zhennan.entity.Address">
+        <property name="id" value="10011"></property>
+        <property name="name" value="南京路"></property>
+    </bean>
 
 </beans>
